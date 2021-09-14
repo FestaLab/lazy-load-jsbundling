@@ -1,10 +1,10 @@
 source "https://rubygems.org"
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby "3.0.2"
+ruby "2.7.0"
 
 # Use local checkout of Rails
-gem "rails", path: "/Users/brenogazzola/RubymineProjects/rails-dev-box/rails"
+gem "rails", github: "rails/rails", branch: "main"
 
 # Use sqlite3 as the database for Active Record
 gem "sqlite3", "~> 1.4"
@@ -13,7 +13,7 @@ gem "sqlite3", "~> 1.4"
 gem "puma", "~> 5.0"
 
 # Bundle and transpile JavaScript [https://github.com/rails/jsbundling-rails]
-gem "jsbundling-rails", "~> 0.1.0"
+gem "jsbundling-rails", github: "rails/jsbundling-rails", branch: "main"
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem "turbo-rails", ">= 0.7.11"
@@ -29,6 +29,8 @@ gem "jbuilder", "~> 2.7"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
+
+gem "sprockets", github: "rails/sprockets", branch: "master"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"

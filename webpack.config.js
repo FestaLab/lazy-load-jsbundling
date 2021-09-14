@@ -1,5 +1,4 @@
 const path    = require("path")
-const webpack = require('webpack')
 
 module.exports = {
   mode: "production",
@@ -8,11 +7,9 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
+    chunkFilename: '[name]-[contenthash].js',
+    hashFunction: 'sha256',
+    hashDigestLength: 64,
     path: path.resolve(__dirname, "app/assets/builds"),
-  },
-  plugins: [
-    new webpack.optimize.LimitChunkCountPlugin({
-      maxChunks: 1
-    })
-  ]
+  }
 }

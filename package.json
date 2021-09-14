@@ -4,8 +4,10 @@
   "dependencies": {
     "@hotwired/stimulus": "^3.0.0-beta.2",
     "@hotwired/turbo-rails": "^7.0.0-rc.3",
+    "clipboard": "^2.0.8",
     "webpack": "^5.52.1",
     "webpack-cli": "^4.8.0"
+
   },
   "scripts": {
     "build": "webpack --config webpack.config.js"
