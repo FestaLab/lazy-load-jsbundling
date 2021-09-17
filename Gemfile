@@ -30,7 +30,7 @@ gem "jbuilder", "~> 2.7"
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
 
-gem "sprockets", github: "rails/sprockets", branch: "master"
+gem "sprockets", github: "rails/sprockets", ref: "master"
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -43,7 +43,7 @@ gem "sprockets", github: "rails/sprockets", branch: "master"
 
 group :development, :test do
   # Start debugger with binding.b [https://github.com/ruby/debug]
-  gem "debug", ">= 1.0.0", platforms: %i[ mri mingw x64_mingw ]
+  gem "byebug"
 end
 
 group :development do
